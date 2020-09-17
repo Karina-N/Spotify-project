@@ -213,13 +213,38 @@ main {
                 color: grey;
                 font-size: 10px;
                 margin-top: 10px;
-                
-
+            
             }
 
 
-            .checkbox > label {
+            .tickbox {
                 margin-left: 5px;
+                position: relative;
+
+            }
+
+            .tickbox > input {
+                height: 15px;
+                width: 15px;
+                -webkit-appearance: none;
+                border: 1px solid grey;
+                border-radius: 1px;
+                outline: none;
+            }
+
+            .tickbox > input:checked {
+                border: 0;
+                background-color: #1db954;
+            }
+
+            .tickbox > input:checked + span::before {
+                content: '\002714';
+                display: block;
+                color: white;
+                position: absolute;
+                left: 4px;
+                top: 2px;
+
             }
 
             .login-button {
